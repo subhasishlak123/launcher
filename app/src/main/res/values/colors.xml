@@ -1,5 +1,14 @@
 <resources>
+    <!-- Base Colors -->
     <color name="white">#FFFFFFFF</color>
+    <color name="white_semi">#D9FFFFFF</color>
+
+    <!-- M3 Drawer & Search Colors -->
+    <color name="m3_drawer_background">#ED21172A</color>
+    <color name="m3_search_pill_background">#4D2B1B3D</color>
+    <color name="m3_search_stroke">#66FFB5D8</color>
+
+    <!-- Cute Pastel Palette -->
     <color name="cute_pink">#FFB5D8</color>
     <color name="cute_lavender">#D0BCFF</color>
     <color name="cute_text_sub">#E0F5E8FF</color>
