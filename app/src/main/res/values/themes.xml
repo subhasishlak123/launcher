@@ -1,9 +1,12 @@
-<resources>
-    <!-- Shows the system home screen wallpaper behind the app -->
-    <style name="Theme.MyLauncher" parent="Theme.MaterialComponents.NoActionBar">
+
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Material 3 Wallpaper-Backed Launcher Theme -->
+    <style name="Theme.MyLauncher" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="android:windowShowWallpaper">true</item>
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:enforceNavigationBarContrast" tools:targetApi="29">false</item>
+        <item name="android:enforceStatusBarContrast" tools:targetApi="29">false</item>
     </style>
 </resources>

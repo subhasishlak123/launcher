@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class AppAdapter(
-    private val apps: List<AppInfo>,
+    private var apps: List<AppInfo>,
     private val onAppClick: (AppInfo) -> Unit
 ) : RecyclerView.Adapter<AppAdapter.ViewHolder>() {
 
@@ -31,4 +31,9 @@ class AppAdapter(
     }
 
     override fun getItemCount() = apps.size
+
+    fun updateList(newApps: List<AppInfo>) {
+        this.apps = newApps
+        notifyDataSetChanged()
+    }
 }

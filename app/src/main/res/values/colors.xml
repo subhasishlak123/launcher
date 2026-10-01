@@ -1,5 +1,9 @@
+
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="white">#FFFFFFFF</color>
-    <color name="white_semi_transparent">#D9FFFFFF</color>
+    <color name="white_semi">#D9FFFFFF</color>
+    <color name="m3_drawer_background">#E61E1B16</color>
+    <color name="m3_search_pill_background">#4D000000</color>
+    <color name="m3_search_stroke">#33FFFFFF</color>
 </resources>
