@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout 
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -6,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- ==================== HOME SCREEN ==================== -->
+    <!-- ==================== CUTE HOME SCREEN ==================== -->
     <RelativeLayout
         android:id="@+id/homeScreenView"
         android:layout_width="match_parent"
@@ -16,7 +15,7 @@
         android:paddingEnd="24dp"
         android:paddingBottom="24dp">
 
-        <!-- Clock Widget (Long-press to change font) -->
+        <!-- Clock Widget -->
         <LinearLayout
             android:id="@+id/clockContainer"
             android:layout_width="wrap_content"
@@ -34,12 +33,12 @@
                 android:format12Hour="h:mm"
                 android:format24Hour="H:mm"
                 android:includeFontPadding="false"
-                android:shadowColor="#99000000"
-                android:shadowDx="2"
-                android:shadowDy="2"
-                android:shadowRadius="6"
+                android:shadowColor="#AAFFB5D8"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="14"
                 android:textColor="@color/white"
-                android:textSize="76sp" />
+                android:textSize="78sp" />
 
             <TextClock
                 android:id="@+id/clockDate"
@@ -52,33 +51,33 @@
                 android:shadowDx="1"
                 android:shadowDy="1"
                 android:shadowRadius="4"
-                android:textColor="@color/white_semi"
+                android:textColor="@color/cute_text_sub"
                 android:textSize="18sp" />
         </LinearLayout>
 
-        <!-- Bottom Search Bar Pill (Tap to open App Drawer) -->
+        <!-- Bottom Pill Search Bar -->
         <LinearLayout
             android:id="@+id/homeSearchBar"
             android:layout_width="match_parent"
-            android:layout_height="52dp"
+            android:layout_height="54dp"
             android:layout_alignParentBottom="true"
-            android:background="@drawable/bg_search_bar"
+            android:background="@drawable/bg_cute_search_bar"
             android:clickable="true"
             android:focusable="true"
             android:gravity="center_vertical"
-            android:paddingStart="20dp"
-            android:paddingEnd="20dp">
+            android:paddingStart="22dp"
+            android:paddingEnd="22dp">
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Search apps or swipe up..."
-                android:textColor="@color/white_semi"
-                android:textSize="15sp" />
+                android:text="✨ Search apps or swipe up..."
+                android:textColor="@color/cute_lavender"
+                android:textSize="14sp" />
         </LinearLayout>
 
-        <!-- Pinned Home Dock (Favorite Apps) -->
+        <!-- Swipeable Dock RecyclerView -->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/dockRecyclerView"
             android:layout_width="match_parent"
@@ -89,12 +88,12 @@
 
     </RelativeLayout>
 
-    <!-- ==================== APP DRAWER (M3 BOTTOM SHEET) ==================== -->
+    <!-- ==================== CUTE APP DRAWER ==================== -->
     <LinearLayout
         android:id="@+id/appDrawerBottomSheet"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/bg_bottom_sheet"
+        android:background="@drawable/bg_cute_bottom_sheet"
         android:orientation="vertical"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
@@ -103,37 +102,34 @@
         app:behavior_skipCollapsed="true"
         app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
 
-        <!-- M3 Bottom Sheet Drag Handle -->
         <com.google.android.material.bottomsheet.BottomSheetDragHandleView
             android:id="@+id/dragHandle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-        <!-- Drawer Search Bar -->
         <EditText
             android:id="@+id/drawerSearchInput"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginBottom="12dp"
-            android:background="@drawable/bg_search_bar"
-            android:hint="Search apps..."
+            android:background="@drawable/bg_cute_search_bar"
+            android:hint="🌸 Search your apps..."
             android:imeOptions="actionSearch"
             android:inputType="text"
             android:maxLines="1"
             android:paddingStart="20dp"
             android:paddingEnd="20dp"
             android:textColor="@color/white"
-            android:textColorHint="@color/white_semi"
+            android:textColorHint="@color/cute_lavender"
             android:textSize="15sp" />
 
-        <!-- Full App Grid -->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/drawerRecyclerView"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:clipToPadding="false"
-            android:paddingBottom="32dp" />
+            android:paddingBottom="36dp" />
 
     </LinearLayout>
 
