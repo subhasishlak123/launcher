@@ -1,16 +1,23 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:gravity="center"
     android:orientation="vertical"
-    android:padding="10dp">
+    android:padding="8dp">
 
-    <ImageView
-        android:id="@+id/appIcon"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
-        android:contentDescription="App Icon" />
+    <!-- Cute rounded container for the icon -->
+    <FrameLayout
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:background="@drawable/bg_cute_card"
+        android:padding="6dp">
+
+        <ImageView
+            android:id="@+id/appIcon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="App Icon" />
+    </FrameLayout>
 
     <TextView
         android:id="@+id/appName"
