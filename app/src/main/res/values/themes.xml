@@ -1,0 +1,9 @@
+<resources>
+    <!-- Shows the system home screen wallpaper behind the app -->
+    <style name="Theme.MyLauncher" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="android:windowShowWallpaper">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+    </style>
+</resources>
