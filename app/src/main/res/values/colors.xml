@@ -1,7 +1,10 @@
 <resources>
     <color name="white">#FFFFFFFF</color>
-    <color name="white_semi">#D9FFFFFF</color>
-    <color name="m3_drawer_background">#E61E1B16</color>
-    <color name="m3_search_pill_background">#4D000000</color>
-    <color name="m3_search_stroke">#33FFFFFF</color>
+    <color name="cute_pink">#FFB5D8</color>
+    <color name="cute_lavender">#D0BCFF</color>
+    <color name="cute_text_sub">#E0F5E8FF</color>
+    <color name="cute_surface">#ED21172A</color>
+    <color name="cute_pill_bg">#4D2B1B3D</color>
+    <color name="cute_pill_stroke">#66FFB5D8</color>
+    <color name="cute_card_bg">#2AFFFFFF</color>
 </resources>
