@@ -8,8 +8,9 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class AppAdapter(
-    private var apps: List<AppInfo>,
-    private val onAppClick: (AppInfo) -> Unit
+    var apps: MutableList<AppInfo>,
+    private val onAppClick: (AppInfo) -> Unit,
+    private val onAppLongClick: ((AppInfo) -> Unit)? = null
 ) : RecyclerView.Adapter<AppAdapter.ViewHolder>() {
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -27,13 +28,18 @@ class AppAdapter(
         val app = apps[position]
         holder.name.text = app.label
         holder.icon.setImageDrawable(app.icon)
+
         holder.itemView.setOnClickListener { onAppClick(app) }
+        holder.itemView.setOnLongClickListener {
+            onAppLongClick?.invoke(app)
+            true
+        }
     }
 
     override fun getItemCount() = apps.size
 
     fun updateList(newApps: List<AppInfo>) {
-        this.apps = newApps
+        this.apps = newApps.toMutableList()
         notifyDataSetChanged()
     }
 }
